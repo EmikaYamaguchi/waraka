@@ -9,6 +9,30 @@
 @media(min-width:1001px){.hero-grid{grid-template-columns:minmax(0,1fr) 280px;gap:42px}.hero-grid h1{font-size:clamp(38px,4vw,56px);white-space:normal;line-height:1.22}.sticker-card{width:280px;min-width:280px;min-height:330px;margin:0;transform:rotate(3.5deg)}}
 .hero-grid h1 span,.hero-grid h1 em{display:block}.profile-art{padding:0!important;min-height:0!important;height:auto!important;aspect-ratio:1;background:#fff;overflow:hidden}.profile-art img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;display:block;object-fit:cover;object-position:center top}
 
-.about-contact{margin-top:2em}
-.about-contact p{margin:0}
-.about-contact a{color:inherit;text-underline-offset:3px}
+/* Compact services block between profile and activities */
+.services{margin-top:34px;margin-bottom:70px;border:2px solid #25243d;background:#fff;padding:24px 28px;box-shadow:7px 7px 0 #25243d}
+.services-head{display:flex;align-items:end;justify-content:space-between;gap:28px;margin-bottom:18px}
+.services-head .section-kicker{margin:0 0 6px}
+.services-head h2{margin:0;font-size:clamp(28px,3vw,40px);line-height:1.05}
+.services-copy{margin:0;font-size:13px;line-height:1.8;text-align:right}
+.services-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(280px,.9fr);gap:24px;align-items:center;padding-top:16px;border-top:1px solid #25243d}
+.service-tags{display:flex;flex-wrap:wrap;gap:9px}
+.service-tags span{display:inline-flex;align-items:center;min-height:34px;padding:7px 13px;border:1px solid #25243d;border-radius:999px;background:#fff;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.02em;white-space:nowrap}
+.service-tags span:nth-child(1),.service-tags span:nth-child(4){background:#ffe58f}
+.service-tags span:nth-child(2),.service-tags span:nth-child(5){background:#e4defd}
+.service-tags span:nth-child(3),.service-tags span:nth-child(6){background:#d8f2e9}
+.services-contact{padding-left:24px;border-left:1px solid #25243d}
+.services-contact strong{display:block;margin-bottom:6px;font-size:14px}
+.services-contact p{margin:0;font-size:12px;line-height:1.7}
+.services-contact a{color:inherit;font-weight:700;text-underline-offset:3px}
+
+@media(max-width:800px){
+  .services{margin-top:26px;margin-bottom:54px;padding:20px;box-shadow:5px 5px 0 #25243d}
+  .services-head{display:block;margin-bottom:14px}
+  .services-copy{margin-top:12px;text-align:left;font-size:12px}
+  .services-copy br{display:none}
+  .services-grid{grid-template-columns:1fr;gap:18px;padding-top:14px}
+  .service-tags{gap:7px}
+  .service-tags span{font-size:10px;padding:6px 10px;min-height:31px}
+  .services-contact{padding-left:0;padding-top:14px;border-left:0;border-top:1px solid #25243d}
+}
