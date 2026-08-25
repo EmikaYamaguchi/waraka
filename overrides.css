@@ -4,3 +4,6 @@
 .image-modal{position:fixed;inset:0;background:rgba(15,14,28,.84);z-index:20;display:none;align-items:center;justify-content:center;padding:24px}.image-modal.open{display:flex}.image-modal img{max-width:92vw;max-height:86vh;object-fit:contain}.image-modal button{position:absolute;right:24px;top:18px;background:none;border:0;color:#fff;font-size:38px;cursor:pointer}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:30px}.sticker-card{width:min(400px,100%);margin:0 auto}}
 @media(max-width:760px){.card-media{height:135px;min-height:135px;margin:16px 0 13px}.card-media img{inset:0;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important}}
+
+/* Keep the headline and the decorative panel independent. */
+@media(min-width:1001px){.hero-grid{grid-template-columns:minmax(0,1fr) 280px;gap:42px}.hero-grid h1{font-size:clamp(38px,4vw,56px);white-space:normal;line-height:1.22}.sticker-card{width:280px;min-width:280px;min-height:330px;margin:0;transform:rotate(3.5deg)}}
