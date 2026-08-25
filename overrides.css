@@ -1,5 +1,5 @@
 /* Responsive fixes and image cards */
-.card-media{height:156px;min-height:156px;position:relative;overflow:hidden;background:rgba(255,255,255,.62);border:1.5px solid var(--ink);margin:20px 0 17px;padding:9px}
-.card-media img{position:absolute;inset:9px;display:block;width:calc(100% - 18px)!important;height:calc(100% - 18px)!important;max-width:calc(100% - 18px)!important;max-height:calc(100% - 18px)!important;object-fit:contain}
+.card-media{height:190px;min-height:190px;position:relative;overflow:hidden;margin:18px 0 17px}
+.card-media img{position:absolute;inset:0;display:block;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain}
 @media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:30px}.sticker-card{width:min(400px,100%);margin:0 auto}}
-@media(max-width:760px){.card-media{height:115px;min-height:115px;margin:16px 0 13px;padding:6px}.card-media img{inset:6px;width:calc(100% - 12px)!important;height:calc(100% - 12px)!important;max-width:calc(100% - 12px)!important;max-height:calc(100% - 12px)!important}}
+@media(max-width:760px){.card-media{height:135px;min-height:135px;margin:16px 0 13px}.card-media img{inset:0;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important}}
