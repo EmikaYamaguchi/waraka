@@ -7,4 +7,4 @@
 
 /* Keep the headline and the decorative panel independent. */
 @media(min-width:1001px){.hero-grid{grid-template-columns:minmax(0,1fr) 280px;gap:42px}.hero-grid h1{font-size:clamp(38px,4vw,56px);white-space:normal;line-height:1.22}.sticker-card{width:280px;min-width:280px;min-height:330px;margin:0;transform:rotate(3.5deg)}}
-.hero-grid h1 span,.hero-grid h1 em{display:block}.profile-art{padding:0!important;overflow:hidden;background:#fff}.profile-art img{width:100%!important;height:100%!important;max-width:none!important;display:block;object-fit:cover;object-position:center top}
+.hero-grid h1 span,.hero-grid h1 em{display:block}.profile-art{padding:0!important;min-height:0!important;height:auto!important;aspect-ratio:1;background:#fff;overflow:hidden}.profile-art img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;display:block;object-fit:cover;object-position:center top}
