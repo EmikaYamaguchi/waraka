@@ -15,3 +15,5 @@
 @media(max-width:480px){.service-cards{grid-template-columns:1fr}.service-cards article{min-height:0}.services-head h2{font-size:30px}}
 
 .about-name{margin:0 0 12px;font-size:clamp(20px,2.2vw,26px);font-weight:700;line-height:1.35;letter-spacing:.02em}
+
+.profile-inquiry{margin-top:2em}.profile-inquiry strong{display:block;font-size:clamp(20px,2.2vw,26px);font-weight:700;line-height:1.35;letter-spacing:.02em}.profile-inquiry p{margin:8px 0 0;font-size:15px;line-height:1.7}.profile-inquiry a{color:#8e7ce7;font-weight:800;text-underline-offset:4px;text-decoration-thickness:2px}
