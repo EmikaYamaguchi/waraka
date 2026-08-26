@@ -14,6 +14,6 @@
 @media(max-width:800px){.services{margin-top:26px;margin-bottom:54px;padding:20px;box-shadow:5px 5px 0 #25243d}.services-head{display:block;margin-bottom:14px}.services-copy{margin-top:10px;text-align:left;font-size:12px}.services-copy br{display:none}.service-cards{grid-template-columns:repeat(2,1fr)}.service-cards article{min-height:110px;padding:13px}.services-contact{display:block}.services-contact p{margin-top:5px}}
 @media(max-width:480px){.service-cards{grid-template-columns:1fr}.service-cards article{min-height:0}.services-head h2{font-size:30px}}
 
-.about-name{margin:0 0 18px;font:800 clamp(28px,3vw,36px)/1.15 Montserrat,"Noto Sans JP",sans-serif;letter-spacing:-.04em;color:#25253b}.about-name .name-accent{color:#8e7ce7}
+.about-grid .about-name{margin:0 0 18px;font:800 clamp(28px,3vw,36px)/1.15 Montserrat,"Noto Sans JP",sans-serif;letter-spacing:-.04em;color:#25253b}.about-name .name-accent{color:#8e7ce7}
 
 .profile-inquiry{margin-top:2em}.profile-inquiry strong{display:block;font-size:14px;font-weight:700;line-height:1.6;letter-spacing:0}.profile-inquiry p{margin:4px 0 0;font-size:13px;line-height:1.7}.profile-inquiry a{color:inherit;font-weight:700;text-underline-offset:3px;text-decoration-thickness:1px}
