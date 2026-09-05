@@ -466,8 +466,8 @@
 
     .photo-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr 1fr;
-      grid-auto-rows: 155px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: 200px;
       gap: 14px;
     }
 
@@ -482,9 +482,6 @@
       user-select: none;
       -webkit-user-select: none;
     }
-
-    .photo-card.tall { grid-row: span 2; }
-    .photo-card.wide { grid-column: span 2; }
 
     .photo-img {
       position: absolute;
@@ -666,10 +663,6 @@
         grid-template-columns: 1fr;
       }
 
-      .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .about-grid {
         grid-template-columns: 1fr;
       }
@@ -743,17 +736,6 @@
 
       .stamp-card {
         grid-template-columns: 1fr;
-      }
-
-      .photo-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: 230px;
-      }
-
-      .photo-card.tall,
-      .photo-card.wide {
-        grid-row: auto;
-        grid-column: auto;
       }
 
       .service-grid {
@@ -1177,26 +1159,26 @@
 
         <div class="photo-body">
           <div class="photo-grid" id="photoGrid" oncontextmenu="return false">
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2015年8月30日日曜日.jpg')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年11月11日日曜日.jpg')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年12月2日日曜日.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2019年6月19日水曜日_山梨県富士河口湖町.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル4.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_10.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_2.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_3.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_5.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_6.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_7.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_9.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り3.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り_2.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC8148.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9369.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9371.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9509.JPG')"></div></figure>
-            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9695.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2015年8月30日日曜日-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年11月11日日曜日-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年12月2日日曜日-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2019年6月19日水曜日_山梨県富士河口湖町-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル4-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_10-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_2-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_3-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_5-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_6-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_7-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_9-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り3-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り_2-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC8148-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9369-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9371-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9509-web.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9695-web.jpg')"></div></figure>
           </div>
 
           <div class="photo-lightbox" id="photoLightbox" oncontextmenu="return false">
@@ -1216,10 +1198,7 @@
               var j = Math.floor(Math.random() * (i + 1));
               var tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp;
             }
-            var shapes = ['tall', '', '', 'wide', '', '', 'wide', '', 'tall', '', '', 'wide'];
-            cards.forEach(function (card, idx) {
-              var shape = shapes[idx % shapes.length];
-              if (shape) card.classList.add(shape);
+            cards.forEach(function (card) {
               grid.appendChild(card);
 
               card.addEventListener('click', function () {
