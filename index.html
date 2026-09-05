@@ -1203,6 +1203,15 @@
             if (!grid || !lightbox || !lightboxImg) return;
 
             var cards = Array.prototype.slice.call(grid.children);
+            // 読み込めない画像のカードは、白い空枠のまま残さない。
+            cards.forEach(function (card) {
+              var bg = card.querySelector('.photo-img').style.backgroundImage;
+              var match = bg.match(/url\(["']?(.*?)["']?\)/);
+              if (!match) return;
+              var image = new Image();
+              image.onerror = function () { card.remove(); };
+              image.src = match[1];
+            });
             for (var i = cards.length - 1; i > 0; i--) {
               var j = Math.floor(Math.random() * (i + 1));
               var tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp;
