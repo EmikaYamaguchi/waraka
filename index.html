@@ -477,77 +477,26 @@
       overflow: hidden;
       border: 2px solid var(--ink);
       border-radius: 24px;
-      background-size: cover;
-      background-position: center;
       box-shadow: 5px 5px 0 rgba(37,36,61,.18);
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .photo-card.tall { grid-row: span 2; }
     .photo-card.wide { grid-column: span 2; }
 
-    .photo-card::before {
-      content: "";
+    .photo-img {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.56)),
-        radial-gradient(circle at 35% 22%, rgba(255,255,255,.45), transparent 18rem);
+      background-size: cover;
+      background-position: center;
+      transition: transform .5s ease;
+      -webkit-user-drag: none;
+      pointer-events: none;
     }
 
-    .photo-card figcaption {
-      position: absolute;
-      left: 18px;
-      right: 18px;
-      bottom: 17px;
-      z-index: 1;
-      color: #fff;
-      text-shadow: 0 2px 14px rgba(0,0,0,.4);
-    }
-
-    .photo-card span {
-      display: inline-block;
-      margin-bottom: 8px;
-      border: 1px solid rgba(255,255,255,.65);
-      border-radius: 999px;
-      padding: 5px 9px;
-      font-size: 10px;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .photo-card b {
-      display: block;
-      font-size: 22px;
-      line-height: 1.25;
-    }
-
-    .photo-card small {
-      display: block;
-      margin-top: 5px;
-      font-size: 12px;
-    }
-
-    .shot-1 { background-image: linear-gradient(135deg, #21182f, #695b9f 45%, #f1cb83); }
-    .shot-2 { background-image: linear-gradient(135deg, #122d32, #458d8f 48%, #f6dd91); }
-    .shot-3 { background-image: linear-gradient(135deg, #32171e, #ad6876 48%, #f9d2c6); }
-    .shot-4 {
-      background-image:
-        radial-gradient(circle at 76% 35%, #ffe58a 0 10%, transparent 10.5%),
-        radial-gradient(circle at 36% 60%, #ffffff 0 7%, transparent 7.5%),
-        linear-gradient(135deg, #183f33, #4a8f6f 45%, #1b221e);
-    }
-    .shot-5 { background-image: linear-gradient(135deg, #2e334e, #8791b9 52%, #f5e5be); }
-    .shot-6 { background-image: radial-gradient(circle at 72% 25%, rgba(255,255,255,.55), transparent 13%), linear-gradient(135deg, #1f2030, #8f7de8 42%, #ffd9e6); }
-    .shot-7 { background-image: linear-gradient(135deg, #3e2f21, #9c8168 52%, #f1d8b8); }
-
-    .photo-note {
-      margin-top: 18px;
-      border: 2px dashed rgba(37,36,61,.42);
-      border-radius: 22px;
-      background: rgba(255,255,255,.7);
-      padding: 16px 18px;
-      font-size: 13px;
-      text-align: center;
+    .photo-card:hover .photo-img {
+      transform: scale(1.12);
     }
 
     .about-body {
@@ -1201,20 +1150,47 @@
         </div>
 
         <div class="photo-body">
-          <div class="photo-grid">
-            <figure class="photo-card shot-1 tall"><figcaption><span>舞台</span><b>舞台撮影</b><small>光と動きのある瞬間</small></figcaption></figure>
-            <figure class="photo-card shot-4"><figcaption><span>趣味</span><b>ビリヤード</b><small>球・キュー・手元</small></figcaption></figure>
-            <figure class="photo-card shot-2"><figcaption><span>イベント</span><b>イベント撮影</b><small>場の空気ごと残す</small></figcaption></figure>
-            <figure class="photo-card shot-3 wide"><figcaption><span>人物</span><b>人物撮影</b><small>自然な表情を中心に</small></figcaption></figure>
-            <figure class="photo-card shot-5"><figcaption><span>日常</span><b>日常の記録</b><small>何気ない景色</small></figcaption></figure>
-            <figure class="photo-card shot-6 wide"><figcaption><span>制作</span><b>制作風景</b><small>撮影・編集・発信まわり</small></figcaption></figure>
-            <figure class="photo-card shot-7"><figcaption><span>記録</span><b>スナップ</b><small>あとから差し替え予定</small></figcaption></figure>
-          </div>
-
-          <div class="photo-note">
-            実際の写真はあとから差し替え予定。カテゴリ分けしすぎず、一覧でパッと見える形にしています。
+          <div class="photo-grid" id="photoGrid" oncontextmenu="return false">
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2015年8月30日日曜日.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年11月11日日曜日.jpg')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2018年12月2日日曜日.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2019年6月19日水曜日_山梨県富士河口湖町.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル4.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_10.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_2.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_3.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_5.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_6.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_7.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.30_浅草サンバカーニバル_9.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り3.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/2025.8.3_東林間阿波踊り_2.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC8148.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9369.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9371.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9509.JPG')"></div></figure>
+            <figure class="photo-card"><div class="photo-img" style="background-image:url('assets/_DSC9695.JPG')"></div></figure>
           </div>
         </div>
+
+        <script>
+          (function () {
+            var grid = document.getElementById('photoGrid');
+            if (!grid) return;
+            var cards = Array.prototype.slice.call(grid.children);
+            for (var i = cards.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp;
+            }
+            var shapes = ['tall', '', '', 'wide', '', '', 'wide', '', 'tall', '', '', 'wide'];
+            cards.forEach(function (card, idx) {
+              var shape = shapes[idx % shapes.length];
+              if (shape) card.classList.add(shape);
+              grid.appendChild(card);
+            });
+          })();
+        </script>
       </article>
 
       <article class="page" data-page-panel="about">
