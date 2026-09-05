@@ -596,6 +596,94 @@
       line-height: 1.65;
     }
 
+    .news-card {
+      display: grid;
+      grid-template-columns: minmax(220px, .8fr) 1.2fr;
+      gap: 24px;
+      margin-top: 34px;
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      padding: 24px;
+      background: var(--blue);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .news-card-image {
+      border: 1.5px solid var(--ink);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .news-card-image img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .news-card-body {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .news-card-head {
+      margin-bottom: 12px;
+    }
+
+    .news-card-head h3 {
+      margin: 0 0 4px;
+      font-size: clamp(19px, 2.2vw, 24px);
+      letter-spacing: -.04em;
+    }
+
+    .news-card-date {
+      margin: 0;
+      font: 500 11px/1 "DM Mono", monospace;
+      letter-spacing: .04em;
+      color: rgba(37, 36, 61, .7);
+    }
+
+    .news-card-list {
+      margin: 0 0 18px;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .news-card-list li {
+      margin-bottom: 2px;
+    }
+
+    .news-card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1.5px solid rgba(37, 36, 61, .25);
+    }
+
+    .news-card-link a {
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 13px;
+      word-break: break-all;
+      text-underline-offset: 3px;
+    }
+
+    .news-card-qr {
+      width: 84px;
+      height: 84px;
+      border: 1.5px solid var(--ink);
+      border-radius: 12px;
+      background: #fff;
+      padding: 5px;
+      flex: none;
+    }
+
     .contact-body {
       padding: clamp(32px, 6vw, 76px);
       display: grid;
@@ -670,6 +758,14 @@
       .service-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .news-card {
+        grid-template-columns: 1fr;
+      }
+
+      .news-card-image {
+        max-height: 220px;
+      }
     }
 
     @media (max-width: 680px) {
@@ -740,6 +836,15 @@
 
       .service-grid {
         grid-template-columns: 1fr;
+      }
+
+      .news-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .news-card-link {
+        flex-wrap: wrap;
       }
 
       .site-footer {
@@ -1264,6 +1369,30 @@
             <article><b>動画・SNS制作</b><p>YouTubeやショート動画向けの企画、台本、素材構成、Canvaデザイン。</p></article>
             <article><b>LINEスタンプ制作</b><p>AIを活用したキャラクター・スタンプ・絵文字の制作。</p></article>
             <article><b>PC・スマホサポート</b><p>基本操作、設定、便利な使い方などをわかりやすくサポート。</p></article>
+          </div>
+
+          <div class="news-card">
+            <div class="news-card-image">
+              <img src="assets/pool-note-preview.png" alt="ビリヤード配置図メーカーの画面プレビュー" loading="lazy" />
+            </div>
+            <div class="news-card-body">
+              <div class="news-card-head">
+                <h3>最新情報</h3>
+                <p class="news-card-date">2026年9月　ChatGPTとClaudeCodeで作成</p>
+              </div>
+              <p><b>ビリヤード配置図メーカー</b>で、なにができる？</p>
+              <ul class="news-card-list">
+                <li>ビリヤードの台と球の配置を視覚的に作成・管理できるツール</li>
+                <li>マウスドラッグで球を自由に配置</li>
+                <li>複数の球の位置をまとめて保存・読み込み可能</li>
+                <li>ショット予測線を引いて、イメージトレーニングに活用</li>
+                <li>異なるビリヤード形式（9ボール、8ボール等）の配置に対応</li>
+              </ul>
+              <div class="news-card-link">
+                <a href="https://waraka2026.github.io/pool-note/">https://waraka2026.github.io/pool-note/</a>
+                <img class="news-card-qr" src="assets/pool-note-qr.svg" alt="ビリヤード配置図メーカーへのQRコード" width="84" height="84" />
+              </div>
+            </div>
           </div>
         </div>
       </article>
